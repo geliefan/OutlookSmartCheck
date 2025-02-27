@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outlook Smart Check</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+    <h1>Welcome to Outlook Smart Check</h1>
+    <button onclick="showMessage()">Click me</button>
+    <script>
+        function showMessage() {
+            Office.context.mailbox.item.notificationMessages.replaceAsync("info", {
+                type: "informationalMessage",
+                message: "Hello from Outlook Add-in!",
+                icon: "icon16",
+                persistent: true
+            });
+        }
+    </script>
+</body>
+</html>
