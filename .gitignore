@@ -1,0 +1,24 @@
+# Node.js 関連
+node_modules/  # npm install で再インストール可能
+package-lock.json  # lock ファイルはプロジェクトによっては除外することもある（チーム開発の方針次第）
+
+# ビルド成果物
+dist/  # ビルドされたファイルは Git で管理しない
+out/  # 一部のツールが生成するフォルダ
+coverage/  # テスト時のカバレッジレポートを除外
+
+# 開発環境固有の設定
+.vscode/  # VS Code の個人設定
+.idea/  # JetBrains (WebStorm など) の個人設定
+.DS_Store  # macOS の不要ファイル
+Thumbs.db  # Windows の不要ファイル
+
+# Outlook Add-in 特有のファイル
+*.log  # npm やシステムのログファイル
+office-addin-debug.log  # Office Add-in のデバッグログ
+manifest.xml  # 必要に応じて除外（環境ごとに異なる場合）
+
+# 機密情報・環境変数
+.env  # API キーや認証情報を含むファイル
+.env.local  # ローカル専用の環境変数
+.env.production  # 本番用環境変数
